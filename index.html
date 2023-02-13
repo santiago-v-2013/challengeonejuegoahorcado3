@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head> 
+        <!--Configuracion Inicial de la pagina-->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Juego del Ahorcado</title>
+        <link rel="icon" href="Imagenes/letra_s.png">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/flexbox.css">
+    </head>
+    
+    <body>
+    <!--Cuerpo de la pagina-->
+
+        <img src="imagenes/logo.svg" class="logo"> 
+
+        <div id="div-desaparece" class="botones-home">
+            <a href="#horca"><input class="btn-iniciar" type="submit" value="Iniciar Juego" id="iniciar-juego"  >
+            </a>
+            <button class="btn-palabra" id="nova-palavra" onclick="ensenarPantallaDeAgregarPalabra()">Agregar Palabra</button> 
+        </div>
+        
+        <div id="agregar-palabra" class="palabra-nueva">
+            <input class="text-input" type="text" id="input-nueva-palavra"  maxlength="8" placeholder="Escriba una palabra">
+            <div class="form-group">
+                <img src="Imagenes/!.png" class="img-alerta">
+                <label for="input-texto"> Máx. 8 caracteres</label>
+            </div>
+        
+            <div class="botones-div">
+                <input class="btn-azul" type="submit" value="Guardar y empezar" id="btn-guardar">
+                <input class="btn-blanco" type="submit" value="Cancelar" id="btn-cancelar">
+            </div> 
+    </div>
+    
+        <div id="div-aparece-ahorcado" class="canvas">
+            <canvas id="horca" height="860px" width="1200"></canvas>
+            <div class="subrayado">
+
+            </div>
+            
+            <div class="botones-div-canvas">
+                <input class="btn-azul" type="submit" value="Nuevo Juego" id="btn-nuevo-juego">
+                <input class="btn-blanco" type="submit" value="Salir" id="btn-salir">
+            </div>
+        </div>
+
+        <!--Codigos de Java Script-->
+        <script type="text/javascript" src="JS/ahorcado.js"></script>
+        <script type="text/javascript" src="JS/horca.js"></script> 
+    
+    </body>
+
+    <!-- pie de pagina -->
+    <footer>
+        <div class="pie">
+            <nav> 
+                <ul class="pie-pagina">             
+                    <li><a href="https://github.com/santiago-v-2013" target="_blank"><img src="Imagenes/github.png" alt="logo github" class="github"></a></li>
+                    <li><a href="https://www.linkedin.com/in/santiagovasquezsaavedra/" target="_blank"><img src="Imagenes/linkedin.png" alt="logo linkedin" class="linkedin"></a></li>                    
+                    <li><p class="copyright">&copy Copyright Santiago Vasquez Saavedra - 2022</p></li>    
+                </ul> 
+            </nav>
+            
+        </div>   
+            
+    </footer>
+
+</html>
